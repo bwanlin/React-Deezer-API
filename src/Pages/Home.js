@@ -7,7 +7,7 @@ const App = ({ form: { getFieldDecorator, validateFields }, history }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		validateFields((err, values) => {
-			if (!err) {
+			if (!err && values.search && values.search.length > 0) {
 				history.push('/artist/' + values.search)
 			}
 		})

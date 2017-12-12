@@ -18,7 +18,6 @@ function getAlbumsFromArtistReducer(state = initialState, action) {
       errors: {}
     })
   case GET_ALBUMS_FROM_ARTIST_COMPLETE:
-    console.log(action.data);
     return Object.assign({}, state, {
       loading: false,
       errors: {},

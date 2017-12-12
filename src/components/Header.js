@@ -16,7 +16,7 @@ const Header = ({ results, artist, history }) => (
 
 Header.propTypes = {
   history: PropTypes.object.isRequired,
-  results: PropTypes.string.isRequired,
+  results: PropTypes.number.isRequired,
 	artist: PropTypes.string.isRequired,
 }
 

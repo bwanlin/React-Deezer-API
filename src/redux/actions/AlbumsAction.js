@@ -27,11 +27,9 @@ export const getAlbumsFromArtist = (name) => {
     dispatch(getAlbumsFromArtistStart())
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${name}&output=json&limit=50`)
     .then((res) => {
-      console.log(res);
       return (res.json())
     })
     .then((data) => {
-      console.log(data);
       dispatch(getAlbumsFromArtistComplete(data))
     })
     .catch((err) => {

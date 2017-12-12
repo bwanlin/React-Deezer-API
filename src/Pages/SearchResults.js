@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { getAlbumsFromArtist } from '../redux/actions/AlbumsAction'
 import Header from '../components/Header'
 import ShowSingleAlbum from '../components/ShowSingleAlbum'
-import { Spin } from 'antd'
+import { Spin, Button } from 'antd'
 
 class SearchResults extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class SearchResults extends React.Component {
     dispatch(getAlbumsFromArtist(match.params.name))
   }
   render() {
-    const { loading, data, match } = this.props
+    const { loading, data, match, history } = this.props
     if (loading) {
       return (
         <div className="container-loading">
@@ -66,6 +66,7 @@ class SearchResults extends React.Component {
 }
 
 SearchResults.propTypes = {
+  history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
 	loading: PropTypes.bool.isRequired,

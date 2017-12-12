@@ -19,7 +19,7 @@ const ShowSingleAlbum = ({ cover, title, url }) => (
 )
 
 ShowSingleAlbum.propTypes = {
-  cover: PropTypes.string.isRequired,
+  cover: PropTypes.string,
   title: PropTypes.string.isRequired,
 	url: PropTypes.string.isRequired
 }
