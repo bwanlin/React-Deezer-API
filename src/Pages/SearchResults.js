@@ -22,7 +22,7 @@ class SearchResults extends React.Component {
       return (
         <div className="container-loading">
             <div style={{ textAlign: 'center' }}>
-              <h1>Fetching data ...</h1>
+              <h3>Fetching data</h3>
               <Spin size="large"/>
             </div>
         </div>
